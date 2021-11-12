@@ -19,7 +19,7 @@ func main() {
 
 	roni := &User{
 		ID:   "1",
-		Name: "roni",
+		Name: "roni ardiyanto",
 	}
 
 	// Middleware
