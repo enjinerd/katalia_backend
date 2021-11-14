@@ -1,0 +1,1293 @@
+{
+	"info": {
+		"_postman_id": "00017365-e7e1-4916-b7e9-b2dffe3bd7d7",
+		"name": "Linr API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Snippets",
+			"item": [
+				{
+					"name": "all  snippets data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets"
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "598"
+								},
+								{
+									"key": "Etag",
+									"value": "\"1987596677\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:49:47 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 200,\n  \"status\": \"success\",\n  \"message\": \"Data retrieved successfully\",\n  \"date\": \"2021-09-15T21:20:24.049Z\",\n  \"data\": [\n    {\n      \"snippet_id\": \"pMQwEbmozl\",\n      \"title\": \"Capitalize String\",\n      \"descb\": \"Capitalized first char at string.\",\n      \"snippet\": \"const capitalize = str => str.charAt(0).toUpperCase() + str.slice(1)\",\n      \"username\": \"enjinerd\",\n      \"category_det\": [\n        {\n          \"id\": 2,\n          \"name\": \"cheatseet\"\n        }\n      ],\n      \"created_at\": \"2021-11-12T09:11:27+0000\",\n      \"updated\": \"2021-11-12T09:11:27+0000\"\n    },\n    {\n      \"snippet_id\": \"_i89Fu_XzJ\",\n      \"title\": \"Get URI Parameter\",\n      \"descb\": \"Get URI parameter from url.\",\n      \"snippet\": \"const getURIParameters = url =>  (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(    (a, v) => (      (a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a    ),    {}  );\",\n      \"username\": \"bisita\",\n      \"category_det\": [\n        {\n          \"id\": 2,\n          \"name\": \"cheatseet\"\n        }\n      ],\n      \"created_at\": \"2021-11-12T09:11:27+0000\",\n      \"updated\": \"2021-11-12T09:11:27+0000\"\n    },\n    {\n      \"snippet_id\": \"DL3M9bZEyn\",\n      \"title\": \"String Reverse\",\n      \"descb\": \"Reverse string from behind.\",\n      \"snippet\": \"const stringReverse = str => str.split('').reverse().join('');\",\n      \"username\": \"denida\",\n      \"category_det\": [\n        {\n          \"id\": 2,\n          \"name\": \"cheatseet\"\n        }\n      ],\n      \"created_at\": \"2021-11-12T09:11:27+0000\",\n      \"updated\": \"2021-11-12T09:11:27+0000\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "remove  a snippet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets/:snippet_id",
+							"protocol": "https",
+							"host": [
+								"1515cada-513e-41f1-9019-beddd771d99d",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"snippets",
+								":snippet_id"
+							],
+							"variable": [
+								{
+									"key": "snippet_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets/pMQwEbmozl",
+									"protocol": "https",
+									"host": [
+										"1515cada-513e-41f1-9019-beddd771d99d",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"snippets",
+										"pMQwEbmozl"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:37 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"deleted\",\n    \"message\": \"A data has been deleted\",\n    \"date\": \"2021-09-15T17:18:54.086Z\",\n    \"deletedData\": {\n        \"snippet_id\": \"pMQwEbmozl\",\n        \"title\": \"Capitalize String\",\n        \"username\": \"enjinerd\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a snippet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descb\": \"Changed describe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets/:snippet_id",
+							"protocol": "https",
+							"host": [
+								"1515cada-513e-41f1-9019-beddd771d99d",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"snippets",
+								":snippet_id"
+							],
+							"variable": [
+								{
+									"key": "snippet_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"descb\": \"Changed describe\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets/pMQwEbmozl "
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:21 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"status\": \"updated\",\n    \"message\": \"A data has been updated\",\n    \"date\": \"2021-09-15T17:38:28.597Z\",\n    \"data\": {\n      \"snippet_id\": \"pMQwEbmozl\",\n      \"title\": \"Capitalize String\",\n      \"descb\": \"Changed descriobe\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "add snippet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"snippet_id\": \"1EUYFo2z5u\",\n  \"title\": \"Remove duplicates array values\",\n  \"descb\": \"Remove duplicates array values.\",\n  \"snippet\": \"const removeDuplicates = arr => [...new Set(arr)];\",\n  \"username\": \"egian\",\n  \"category_det\": [\n    {\n      \"id\": 2,\n      \"name\": \"cheatseet\"\n    }\n  ],\n  \"created_at\": \"2021-11-12T09:11:27+0000\",\n  \"updated\": \"2021-11-12T09:11:27+0000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets"
+					},
+					"response": [
+						{
+							"name": "Add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"snippet_id\": \"1EUYFo2z5u\",\n  \"title\": \"Remove duplicates array values\",\n  \"descb\": \"Remove duplicates array values.\",\n  \"snippet\": \"const removeDuplicates = arr => [...new Set(arr)];\",\n  \"username\": \"egian\",\n  \"category_det\": [\n    {\n      \"id\": 2,\n      \"name\": \"cheatseet\"\n    }\n  ],\n  \"created_at\": \"2021-11-12T09:11:27+0000\",\n  \"updated\": \"2021-11-12T09:11:27+0000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:06 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"status\": \"created\",\n    \"message\": \"A new snippet data created.\",\n    \"date\": \"2021-09-15T15:42:28.988Z\",\n    \"data\": {\n        \"snippet_id\": \"1EUYFo2z5u\",\n        \"title\": \"Remove duplicates array values\",\n        \"descb\": \"Remove duplicates array values.\",\n        \"snippet\": \"const removeDuplicates = arr => [...new Set(arr)];\",\n        \"username\": \"egian\",\n        \"category_det\": [\n            {\n                \"id\": 2,\n                \"name\": \"cheatseet\"\n            }\n        ],\n        \"created_at\": \"2021-11-12T09:11:27+0000\",\n        \"updated\": \"2021-11-12T09:11:27+0000\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "comments from spesifc snippets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/comments/:snippet_id",
+							"protocol": "https",
+							"host": [
+								"1515cada-513e-41f1-9019-beddd771d99d",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"comments",
+								":snippet_id"
+							],
+							"variable": [
+								{
+									"key": "snippet_id",
+									"value": "pMQwEbmozl"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/comments/pMQwEbmozl"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "598"
+								},
+								{
+									"key": "Etag",
+									"value": "\"1987596677\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:49:47 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Data retrieved successfully\",\n    \"date\": \"2021-09-15T21:20:24.049Z\",\n    \"data\": {\n        \"snippet_id\": \"pMQwEbmozl\",\n        \"title\": \"Capitalize String\",\n        \"comments\": [\n            {\n                \"comment_id\": \"QiLzXJRkPh\",\n                \"comment\": \"nice\",\n                \"username\": \"reka\",\n                \"created_at\": \"2021-11-12T09:11:27+0000\",\n                \"updated\": \"2021-11-12T09:11:27+0000\"\n            },\n            {\n                \"comment_id\": \"M1kpqr2boQ\",\n                \"comment\": \"awesome\",\n                \"username\": \"isal\",\n                \"created_at\": \"2021-11-12T09:11:27+0000\",\n                \"updated\": \"2021-11-12T09:11:27+0000\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete a comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/comments/:comment_id",
+							"protocol": "https",
+							"host": [
+								"1515cada-513e-41f1-9019-beddd771d99d",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"comments",
+								":comment_id"
+							],
+							"variable": [
+								{
+									"key": "comment_id",
+									"value": "pMQwEbmozl"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/comments/QiLzXJRkPh",
+									"protocol": "https",
+									"host": [
+										"1515cada-513e-41f1-9019-beddd771d99d",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"comments",
+										"QiLzXJRkPh"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:37 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"deleted\",\n    \"message\": \"A data has been deleted\",\n    \"date\": \"2021-09-15T17:18:54.086Z\",\n    \"deletedData\": {\n        \"comment_id\": \"QiLzXJRkPh\",\n        \"comment\": \"nice\",\n        \"username\": \"reka\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"comment\": \"Changed comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/comments/:comment_id",
+							"protocol": "https",
+							"host": [
+								"1515cada-513e-41f1-9019-beddd771d99d",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"comments",
+								":comment_id"
+							],
+							"variable": [
+								{
+									"key": "comment_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"descb\": \"Changed describe\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets/pMQwEbmozl "
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:21 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"status\": \"updated\",\n    \"message\": \"A data has been updated\",\n    \"date\": \"2021-09-15T17:38:28.597Z\",\n    \"data\": {\n      \"comment_id\": \"M1kpqr2boQ\",\n      \"comment\": \"It's help me\",\n      \"username\": \"isal\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "add comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"comment_id\": \"O8bcxATi7b\",\n  \"comment\": \"Wow, its rocks\",\n  \"snippet_id\": \"pMQwEbmozl\",\n  \"username\": \"veraanb\",\n  \"created_at\": \"2021-11-12T09:11:27+0000\",\n  \"updated\": \"2021-11-12T09:11:27+0000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/comments"
+					},
+					"response": [
+						{
+							"name": "Add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"comment_id\": \"O8bcxATi7b\",\n  \"comment\": \"Wow, its rocks\",\n  \"snippet_id\": \"pMQwEbmozl\",\n  \"username\": \"veraanb\",\n  \"created_at\": \"2021-11-12T09:11:27+0000\",\n  \"updated\": \"2021-11-12T09:11:27+0000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/snippets"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:06 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"status\": \"created\",\n    \"message\": \"A new comment created.\",\n    \"date\": \"2021-09-15T15:42:28.988Z\",\n    \"data\": {\n        \"comment_id\": \"O8bcxATi7b\",\n        \"comment\": \"Wow, its rocks\",\n        \"snippet_id\": \"pMQwEbmozl\",\n        \"username\": \"veraanb\",\n        \"created_at\": \"2021-11-12T09:11:27+0000\",\n        \"updated\": \"2021-11-12T09:11:27+0000\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Saved",
+			"item": [
+				{
+					"name": "all saved",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/saved"
+					},
+					"response": [
+						{
+							"name": "all saved",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/saved"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "598"
+								},
+								{
+									"key": "Etag",
+									"value": "\"1987596677\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:49:47 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"code\": 200,\n  \"status\": \"success\",\n  \"message\": \"Data retrieved successfully\",\n  \"date\": \"2021-09-15T21:20:24.049Z\",\n  \"data\": [\n    {\n      \"snippet_id\": \"1VadYg2T8_a\",\n      \"title\": \"Random Sorting\"\n    },\n    {\n      \"snippet_id\": \"asyTge6_1j\",\n      \"title\": \"Generate UUID\"\n    },\n    {\n      \"snippet_id\": \"pMQwEbmozl\",\n      \"title\": \"Capitalize String\"\n    },\n    {\n      \"snippet_id\": \"DL3M9bZEyn\",\n      \"title\": \"String Reverse\"\n    },\n    {\n      \"snippet_id\": \"_i89Fu_XzJ\",\n      \"title\": \"Get URI Parameter\"\n    },\n    {\n      \"snippet_id\": \"1EUYFo2z5u\",\n      \"title\": \"Remove duplicates array values\"\n    }\n  ]\n}"
+						}
+					]
+				},
+				{
+					"name": "delete a saved snippet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/saved?saved_id",
+							"protocol": "https",
+							"host": [
+								"1515cada-513e-41f1-9019-beddd771d99d",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"saved"
+							],
+							"query": [
+								{
+									"key": "saved_id",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/saved?saved_id=_i89Fu_XzJ",
+									"protocol": "https",
+									"host": [
+										"1515cada-513e-41f1-9019-beddd771d99d",
+										"mock",
+										"pstmn",
+										"io"
+									],
+									"path": [
+										"saved"
+									],
+									"query": [
+										{
+											"key": "saved_id",
+											"value": "_i89Fu_XzJ"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:37 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"deleted\",\n    \"message\": \"A data has been deleted\",\n    \"date\": \"2021-09-15T17:18:54.086Z\",\n    \"username\": \"reka\",\n    \"deletedData\":     {\n      \"snippet_id\": \"_i89Fu_XzJ\",\n      \"title\": \"Get URI Parameter\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "add a saved",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"comment_id\": \"O8bcxATi7b\",\n  \"comment\": \"Wow, its rocks\",\n  \"snippet_id\": \"pMQwEbmozl\",\n  \"username\": \"veraanb\",\n  \"created_at\": \"2021-11-12T09:11:27+0000\",\n  \"updated\": \"2021-11-12T09:11:27+0000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/saved"
+					},
+					"response": [
+						{
+							"name": "Add",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"snippet_id\": \"pMQwEbmozl\",\n    \"title\": \"Capitalize String\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/saved"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:06 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"status\": \"created\",\n    \"message\": \"A new saved created.\",\n    \"date\": \"2021-09-15T15:42:28.988Z\",\n    \"data\": {\n        \"snippet_id\": \"pMQwEbmozl\",\n        \"title\": \"Capitalize String\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "get a user info",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/user"
+					},
+					"response": [
+						{
+							"name": "Get",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "598"
+								},
+								{
+									"key": "Etag",
+									"value": "\"1987596677\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:49:47 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"message\": \"Data retrieved successfully\",\n    \"date\": \"2021-09-15T21:20:24.049Z\",\n    \"data\": {\n        \"code\": 200,\n        \"status\": \"success\",\n        \"message\": \"Data retrieved successfully\",\n        \"date\": \"2021-09-15T21:20:24.049Z\",\n        \"data\": {\n            \"user_id\": \"LMcj6nX7vh\",\n            \"username\": \"reka\",\n            \"email\": \"reka@email.dev\",\n            \"created_at\": \"2021-11-12T09:11:27+0000\",\n            \"updated\": \"2021-11-12T09:11:27+0000\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update a username",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "t0K3nB3arer"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"newreka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/user"
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"descb\": \"Changed describe\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "Cowboy"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE,OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "X-Requested-With,Content-Type,Cache-Control,access_token"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "207"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Sep 2021 00:50:21 GMT"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 vegur"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 201,\n    \"status\": \"updated\",\n    \"message\": \"A data has been updated\",\n    \"date\": \"2021-09-15T17:38:28.597Z\",\n    \"data\": {\n        \"code\": 200,\n        \"status\": \"success\",\n        \"message\": \"Data retrieved successfully\",\n        \"date\": \"2021-09-15T21:20:24.049Z\",\n        \"data\": {\n            \"user_id\": \"LMcj6nX7vh\",\n            \"username\": \"newreka\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "host_url",
+			"value": "https://1515cada-513e-41f1-9019-beddd771d99d.mock.pstmn.io"
+		}
+	]
+}
