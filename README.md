@@ -1,5 +1,7 @@
 # Linr backend
+
 built with Go + MySQL
+
 ## API Reference
 
 #### Get all snippets
@@ -8,10 +10,10 @@ built with Go + MySQL
   GET /api/snippets
 ```
 
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
+| Parameter  | Type     | Description                 |
+| :--------- | :------- | :-------------------------- |
 | `username` | `string` | **Required**. Your Username |
-|  `password`| `string`| **Required**. Your Password
+| `password` | `string` | **Required**. Your Password |
 
 #### Get snippet
 
@@ -23,15 +25,10 @@ built with Go + MySQL
 | :-------- | :------- | :-------------------------------- |
 | `id`      | `string` | **Required**. Id of item to fetch |
 
-
-
-
 ## Authors
 
 - [@enjinerd](https://www.github.com/enjinerd)
 
-
 ## Demo
 
 [Project Preview](https://linr.ron.my.id)
-
