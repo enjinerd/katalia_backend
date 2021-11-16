@@ -8,10 +8,10 @@ import (
 )
 
 type Base struct {
-	ID        string `gorm:"primary_key"`
-	CreatedAt time.Time
-	UpdatedAt time.Time
-	DeletedAt *time.Time `sql:"index"`
+	ID        string     `gorm:"primary_key" json:"id"`
+	CreatedAt time.Time  `json:"created_at"`
+	UpdatedAt time.Time  `json:"updated_at"`
+	DeletedAt *time.Time `gorm:"index" json:"deleted_at"`
 }
 
 // BeforeCreate will set a UUID rather than numeric ID.
@@ -20,6 +20,6 @@ func (base *Base) BeforeCreate(tx *gorm.DB) error {
 	if err != nil {
 		return err
 	}
-	tx.Statement.SetColumn("ID", id)
+	tx.Statement.SetColumn("id", id)
 	return nil
 }

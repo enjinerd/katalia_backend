@@ -1,27 +1,31 @@
 package routes
 
 import (
+	"fmt"
+	"katalia/snippets"
 	"katalia/utils"
 
 	"github.com/labstack/echo/v4"
 )
 
-func GetSnippet(c echo.Context) error {
-	return c.String(200, "Hello, World!")
-}
-
 func ApiRoutes(e *echo.Echo) {
-	// add slice of routes here
-	routes := []utils.Route{
-		{
-			Method:  "GET",
-			Path:    "/",
-			Handler: GetSnippet,
-		},
+	controllers := []utils.Controller{
+		snippets.SnippetsController{},
 	}
-
+	var routes []utils.Route
+	for _, controller := range controllers {
+		routes = append(routes, controller.Routes()...)
+	}
+	fmt.Println(routes)
 	api := e.Group("/api")
+
 	for _, route := range routes {
-		api.Add(route.Method, route.Path, route.Handler)
+		switch route.Method {
+		case echo.GET:
+			{
+				api.GET(route.Path, route.Handler)
+				break
+			}
+		}
 	}
 }

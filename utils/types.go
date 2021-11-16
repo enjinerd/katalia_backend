@@ -12,13 +12,18 @@ import (
 type (
 	// Route struct
 	Route struct {
-		Method  string
-		Path    string
-		Handler echo.HandlerFunc
+		Method     string
+		Path       string
+		Handler    echo.HandlerFunc
+		Middleware []echo.MiddlewareFunc
 	}
 
 	CustomValidator struct {
 		Validator *validator.Validate
+	}
+
+	Controller interface {
+		Routes() []Route
 	}
 
 	ValidationError struct {
