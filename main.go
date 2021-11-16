@@ -20,7 +20,6 @@ func main() {
 	}
 
 	api := echo.New()
-	api.Pre(middleware.AddTrailingSlash())
 	api.Validator = &utils.CustomValidator{Validator: validator.New()}
 	api.Use(middleware.Logger())
 	api.Use(middleware.Recover())
@@ -41,6 +40,7 @@ func main() {
 
 	routes.ApiRoutes(api)
 	server := echo.New()
+	server.Pre(middleware.AddTrailingSlash())
 	server.Any("/*", func(c echo.Context) (err error) {
 		req := c.Request()
 		res := c.Response()
